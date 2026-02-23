@@ -10,6 +10,9 @@ importers:
       "@fastify/cors":
         specifier: ^11.2.0
         version: 11.2.0
+      "@fastify/rate-limit":
+        specifier: ^10.3.0
+        version: 10.3.0
       fastify:
         specifier: ^5.7.4
         version: 5.7.4
@@ -310,11 +313,24 @@ packages:
         integrity: sha512-INS+6gh91cLUjB+PVHfu1UqcB76Sqtpyp7bnL+FYojhjygvOPA9ctiD/JDKsyD9Xgu4hUhCSJBPig/w7duNajw==,
       }
 
+  "@fastify/rate-limit@10.3.0":
+    resolution:
+      {
+        integrity: sha512-eIGkG9XKQs0nyynatApA3EVrojHOuq4l6fhB4eeCk4PIOeadvOJz9/4w3vGI44Go17uaXOWEcPkaD8kuKm7g6Q==,
+      }
+
   "@jridgewell/sourcemap-codec@1.5.5":
     resolution:
       {
         integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==,
       }
+
+  "@lukeed/ms@2.0.2":
+    resolution:
+      {
+        integrity: sha512-9I2Zn6+NJLfaGoz9jN3lpwDgAYvfGeNYdbAIjJOqzs4Tpc+VU3Jqq4IofSUBKajiDS8k9fZIg18/z13mpk1bsA==,
+      }
+    engines: { node: ">=8" }
 
   "@pinojs/redact@0.4.0":
     resolution:
@@ -1302,7 +1318,15 @@ snapshots:
       "@fastify/forwarded": 3.0.1
       ipaddr.js: 2.3.0
 
+  "@fastify/rate-limit@10.3.0":
+    dependencies:
+      "@lukeed/ms": 2.0.2
+      fastify-plugin: 5.1.0
+      toad-cache: 3.7.0
+
   "@jridgewell/sourcemap-codec@1.5.5": {}
+
+  "@lukeed/ms@2.0.2": {}
 
   "@pinojs/redact@0.4.0": {}
 

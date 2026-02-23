@@ -1,5 +1,6 @@
 import Fastify, { type FastifyInstance } from "fastify";
 import cors from "@fastify/cors";
+import rateLimit from "@fastify/rate-limit";
 import { getConfig, type AppConfig } from "./config.js";
 import {
   ChatJimmyClient,
@@ -48,6 +49,11 @@ export function buildApp(deps: AppDependencies = {}): FastifyInstance {
   });
 
   app.register(cors, { origin: true, credentials: true });
+  app.register(rateLimit, {
+    global: true,
+    max: 120,
+    timeWindow: "1 minute",
+  });
 
   app.addHook("preHandler", async (request) => {
     const maybeBody =
