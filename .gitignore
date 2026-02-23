@@ -1,0 +1,5 @@
+.cursorignore
+.env
+.cursor/
+node_modules/
+.DS_Store
