@@ -1,64 +1,64 @@
 {
-	"name": "taalas-chatjimmy-wrapper",
-	"version": "1.0.0",
-	"description": "Unofficial OpenAI-compatible wrapper for chatjimmy.ai by Taalas",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"start": "pnpm server:start",
-		"server:test": "vitest run --config server/vitest.config.ts",
-		"server:start": "tsx server/src/index.ts",
-		"server:typecheck": "tsc -p server/tsconfig.json --noEmit",
-		"server:test:tools": "vitest run --config server/vitest.config.ts -t tool",
-		"test": "pnpm server:test",
-		"test:tools": "pnpm server:test:tools",
-		"examples:node": "node examples/node/openai-sdk.mjs",
-		"examples:python": "python3 examples/python/openai_sdk.py",
-		"examples:curl:all": "pnpm examples:curl:models && pnpm examples:curl:non-stream && pnpm examples:curl:stream",
-		"examples:curl:models": "bash examples/curl/models.sh",
-		"examples:curl:stream": "bash examples/curl/chat-stream.sh",
-		"examples:curl:non-stream": "bash examples/curl/chat-non-stream.sh",
-		"examples:curl:tools-required": "bash examples/curl/tools-required.sh",
-		"check": "pnpm server:typecheck && pnpm server:test",
-		"typecheck": "pnpm server:typecheck",
-		"format": "prettier --write .",
-		"format:check": "prettier --check ."
-	},
-	"keywords": [
-		"openai-compatible",
-		"wrapper",
-		"proxy",
-		"chatjimmy",
-		"fastify",
-		"taalas",
-		"taalas-chatjimmy-wrapper",
-		"api-wrapper",
-		"api-proxy",
-		"open-ai",
-		"open-ai-endpoint",
-		"fast-ai",
-		"HC1",
-		"llama3.1-8B",
-		"tokens",
-		"inference",
-		"v1"
-	],
-	"author": "Zoheb Malik",
-	"license": "MIT",
-	"packageManager": "pnpm@10.30.1",
-	"engines": {
-		"node": ">=20"
-	},
-	"devDependencies": {
-		"@types/node": "^25.3.0",
-		"openai": "^6.22.0",
-		"prettier": "^3.8.1",
-		"tsx": "^4.21.0",
-		"typescript": "^5.9.3",
-		"vitest": "^4.0.18"
-	},
-	"dependencies": {
-		"@fastify/cors": "^11.2.0",
-		"fastify": "^5.7.4"
-	}
+  "name": "taalas-chatjimmy-wrapper",
+  "version": "1.0.0",
+  "description": "Unofficial OpenAI-compatible wrapper for chatjimmy.ai by Taalas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "pnpm server:start",
+    "server:test": "vitest run --config server/vitest.config.ts",
+    "server:start": "tsx server/src/index.ts",
+    "server:typecheck": "tsc -p server/tsconfig.json --noEmit",
+    "server:test:tools": "vitest run --config server/vitest.config.ts -t tool",
+    "test": "pnpm server:test",
+    "test:tools": "pnpm server:test:tools",
+    "examples:node": "node examples/node/openai-sdk.mjs",
+    "examples:python": "python3 examples/python/openai_sdk.py",
+    "examples:curl:all": "pnpm examples:curl:models && pnpm examples:curl:non-stream && pnpm examples:curl:stream",
+    "examples:curl:models": "bash examples/curl/models.sh",
+    "examples:curl:stream": "bash examples/curl/chat-stream.sh",
+    "examples:curl:non-stream": "bash examples/curl/chat-non-stream.sh",
+    "examples:curl:tools-required": "bash examples/curl/tools-required.sh",
+    "check": "pnpm server:typecheck && pnpm server:test",
+    "typecheck": "pnpm server:typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "openai-compatible",
+    "wrapper",
+    "proxy",
+    "chatjimmy",
+    "fastify",
+    "taalas",
+    "taalas-chatjimmy-wrapper",
+    "api-wrapper",
+    "api-proxy",
+    "open-ai",
+    "open-ai-endpoint",
+    "fast-ai",
+    "HC1",
+    "llama3.1-8B",
+    "tokens",
+    "inference",
+    "v1"
+  ],
+  "author": "Zoheb Malik",
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "openai": "^6.22.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "fastify": "^5.7.4"
+  }
 }
