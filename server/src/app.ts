@@ -49,10 +49,15 @@ export function buildApp(deps: AppDependencies = {}): FastifyInstance {
   });
 
   app.register(cors, { origin: true, credentials: true });
-  app.register(rateLimit, {
-    global: true,
-    max: 120,
-    timeWindow: "1 minute",
+  app.register(rateLimit);
+  app.after(() => {
+    app.addHook(
+      "onRequest",
+      app.rateLimit({
+        max: 120,
+        timeWindow: "1 minute",
+      }),
+    );
   });
 
   app.addHook("preHandler", async (request) => {
