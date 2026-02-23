@@ -257,7 +257,8 @@ External contributions are welcome.
 
 - Read `docs/CONTRIBUTING.md` before opening a pull request.
 - Follow `docs/SECURITY.md` for vulnerability reporting (do not post exploits in public issues).
-- PRs are expected to pass required checks (format, typecheck, tests, and security workflows) before merge.
+- PRs are expected to pass required checks (CI, Gitleaks, and CodeQL) before merge.
+- Dependency audit runs on `main` and on a schedule to reduce noisy contributor-facing failures.
 
 ## Important Notice
 

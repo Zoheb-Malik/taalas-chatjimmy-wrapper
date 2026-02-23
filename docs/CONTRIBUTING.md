@@ -42,7 +42,8 @@ pnpm check
 A PR is considered ready for maintainer review only when:
 
 - Formatting, typecheck, and tests pass locally.
-- GitHub Actions checks pass for the PR.
+- GitHub Actions PR checks pass (CI, Gitleaks, and CodeQL).
+- Dependency audit is enforced on `main` and scheduled scans (not as a contributor PR gate).
 - Behavior changes include test coverage updates.
 - The PR description clearly explains:
   - what changed,
